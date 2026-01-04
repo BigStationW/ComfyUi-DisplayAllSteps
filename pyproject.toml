@@ -28,7 +28,7 @@ Documentation = "https://github.com/BigStationW/ComfyUi-DisplayAllSteps/wiki"
 "Bug Tracker" = "https://github.com/BigStationW/ComfyUi-DisplayAllSteps/issues"
 
 [tool.comfy]
-PublisherId = ""
+PublisherId = "bigstationw"
 DisplayName = "ComfyUi-DisplayAllSteps"
 Icon = ""
 includes = [] 
