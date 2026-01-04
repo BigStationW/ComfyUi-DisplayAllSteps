@@ -30,7 +30,7 @@ Documentation = "https://github.com/BigStationW/ComfyUi-DisplayAllSteps/wiki"
 [tool.comfy]
 PublisherId = "bigstationw"
 DisplayName = "ComfyUi-DisplayAllSteps"
-Icon = ""
+Icon = "bigstationw"
 includes = [] 
 # "requires-comfyui" = ">=1.0.0"  # ComfyUI version compatibility
 
