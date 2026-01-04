@@ -1,0 +1,633 @@
+{
+  "id": "44259803-f9d6-4eb1-a94a-75b8213649d0",
+  "revision": 0,
+  "last_node_id": 145,
+  "last_link_id": 301,
+  "nodes": [
+    {
+      "id": 25,
+      "type": "KSamplerSelect",
+      "pos": [
+        1470.7205810546875,
+        1977.5584716796875
+      ],
+      "size": [
+        315,
+        58
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "SAMPLER",
+          "type": "SAMPLER",
+          "slot_index": 0,
+          "links": [
+            295
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.43",
+        "Node name for S&R": "KSamplerSelect"
+      },
+      "widgets_values": [
+        "euler"
+      ]
+    },
+    {
+      "id": 11,
+      "type": "PreviewImage",
+      "pos": [
+        2556.213134765625,
+        1685.392578125
+      ],
+      "size": [
+        989.8551025390625,
+        841.31640625
+      ],
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 300
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "PreviewImage"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 24,
+      "type": "RandomNoise",
+      "pos": [
+        1493.861572265625,
+        2111.68115234375
+      ],
+      "size": [
+        270,
+        82
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "NOISE",
+          "type": "NOISE",
+          "links": [
+            293
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "RandomNoise"
+      },
+      "widgets_values": [
+        42,
+        "fixed"
+      ]
+    },
+    {
+      "id": 9,
+      "type": "VAELoader",
+      "pos": [
+        169.35055541992188,
+        2300.390625
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            298
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "VAELoader"
+      },
+      "widgets_values": [
+        "z_image_turbo_vae.safetensors"
+      ]
+    },
+    {
+      "id": 138,
+      "type": "CLIPLoader",
+      "pos": [
+        175.8638458251953,
+        2079.652099609375
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            280
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "CLIPLoader"
+      },
+      "widgets_values": [
+        "qwen_3_4b.safetensors",
+        "lumina2",
+        "default"
+      ]
+    },
+    {
+      "id": 141,
+      "type": "BasicGuider",
+      "pos": [
+        1549.7847900390625,
+        1839.0650634765625
+      ],
+      "size": [
+        161.1999969482422,
+        46
+      ],
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 287
+        },
+        {
+          "name": "conditioning",
+          "type": "CONDITIONING",
+          "link": 301
+        }
+      ],
+      "outputs": [
+        {
+          "name": "GUIDER",
+          "type": "GUIDER",
+          "links": [
+            294
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "BasicGuider"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 1,
+      "type": "UNETLoader",
+      "pos": [
+        150.29949951171875,
+        1761.9669189453125
+      ],
+      "size": [
+        372.83856201171875,
+        101.74070739746094
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            150
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.71",
+        "Node name for S&R": "UNETLoader"
+      },
+      "widgets_values": [
+        "Z-image\\z_image_turbo_bf16.safetensors",
+        "default"
+      ]
+    },
+    {
+      "id": 144,
+      "type": "SamplerCustomAdvancedAllSteps",
+      "pos": [
+        1858.6966552734375,
+        1905.323974609375
+      ],
+      "size": [
+        296.3006286621094,
+        326
+      ],
+      "flags": {},
+      "order": 10,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "noise",
+          "type": "NOISE",
+          "link": 293
+        },
+        {
+          "name": "guider",
+          "type": "GUIDER",
+          "link": 294
+        },
+        {
+          "name": "sampler",
+          "type": "SAMPLER",
+          "link": 295
+        },
+        {
+          "name": "sigmas",
+          "type": "SIGMAS",
+          "link": 296
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 297
+        }
+      ],
+      "outputs": [
+        {
+          "name": "output",
+          "type": "LATENT",
+          "links": []
+        },
+        {
+          "name": "denoised_output",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "all_steps_latents",
+          "type": "LATENT",
+          "links": [
+            299
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SamplerCustomAdvancedAllSteps"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 145,
+      "type": "VAEDecodeAllSteps",
+      "pos": [
+        2227.993408203125,
+        1740.8251953125
+      ],
+      "size": [
+        252,
+        46
+      ],
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 299
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 298
+        }
+      ],
+      "outputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "links": [
+            300
+          ]
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecodeAllSteps"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 8,
+      "type": "EmptyLatentImage",
+      "pos": [
+        1522.3353271484375,
+        2462.1845703125
+      ],
+      "size": [
+        210,
+        106
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            297
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "EmptyLatentImage"
+      },
+      "widgets_values": [
+        1280,
+        720,
+        1
+      ]
+    },
+    {
+      "id": 31,
+      "type": "BasicScheduler",
+      "pos": [
+        1488.5775146484375,
+        2288.0078125
+      ],
+      "size": [
+        270,
+        106
+      ],
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 283
+        }
+      ],
+      "outputs": [
+        {
+          "name": "SIGMAS",
+          "type": "SIGMAS",
+          "links": [
+            296
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "BasicScheduler"
+      },
+      "widgets_values": [
+        "normal",
+        20,
+        1
+      ]
+    },
+    {
+      "id": 29,
+      "type": "ModelSamplingAuraFlow",
+      "pos": [
+        741.8842163085938,
+        1679.7069091796875
+      ],
+      "size": [
+        270,
+        58
+      ],
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 150
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            283,
+            287
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.75",
+        "Node name for S&R": "ModelSamplingAuraFlow"
+      },
+      "widgets_values": [
+        7.000000000000002
+      ]
+    },
+    {
+      "id": 136,
+      "type": "CLIPTextEncode",
+      "pos": [
+        707.62548828125,
+        1949.6905517578125
+      ],
+      "size": [
+        460.0069580078125,
+        275.40887451171875
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": 280
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            301
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.76",
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "Artistic Style: Cinematic realism with atmospheric lighting, painterly texture, and a moody color palette dominated by deep blues, blacks, and subtle warm glows, evoking the aesthetic of a 2023 space film with dramatic composition and emphasis on vastness.  \n\nCharacter Description: A young woman with short, light brown hair tied back with a blue hair tie, fair skin with natural texture, wearing a traditional outfit consisting of a white upper garment with delicate fabric folds, a deep blue skirt with subtle patterns, a yellow sash adorned with green floral embroidery, and a flowing white cape. She holds a staff with a blue shaft and gold accents, its surface rendered with realistic texture.  \n\nScene and Environment: A vast mountainous landscape with snow-capped peaks and swirling clouds below, under a dark sky where a large, glowing planet (resembling Earth) dominates the horizon, creating a sense of cosmic scale and solitude.  \n\nAction, Pose, and Interaction: Seated on a rugged rock formation, the character gazes toward the planet with a contemplative expression, her posture relaxed yet aware of the vastness around her. The staff rests on the ground beside her, partially obscured by the rocky terrain.  \n\nTechnical or Cinematic Details: High-detail rendering with realistic textures on the character’s clothing, skin, and the landscape, cinematic lighting emphasizing the depth of the scene and the soft glow from the planet, subtle depth of field maintaining atmospheric detail in the background."
+      ]
+    }
+  ],
+  "links": [
+    [
+      150,
+      1,
+      0,
+      29,
+      0,
+      "MODEL"
+    ],
+    [
+      280,
+      138,
+      0,
+      136,
+      0,
+      "CLIP"
+    ],
+    [
+      283,
+      29,
+      0,
+      31,
+      0,
+      "MODEL"
+    ],
+    [
+      287,
+      29,
+      0,
+      141,
+      0,
+      "MODEL"
+    ],
+    [
+      293,
+      24,
+      0,
+      144,
+      0,
+      "NOISE"
+    ],
+    [
+      294,
+      141,
+      0,
+      144,
+      1,
+      "GUIDER"
+    ],
+    [
+      295,
+      25,
+      0,
+      144,
+      2,
+      "SAMPLER"
+    ],
+    [
+      296,
+      31,
+      0,
+      144,
+      3,
+      "SIGMAS"
+    ],
+    [
+      297,
+      8,
+      0,
+      144,
+      4,
+      "LATENT"
+    ],
+    [
+      298,
+      9,
+      0,
+      145,
+      1,
+      "VAE"
+    ],
+    [
+      299,
+      144,
+      2,
+      145,
+      0,
+      "LATENT"
+    ],
+    [
+      300,
+      145,
+      0,
+      11,
+      0,
+      "IMAGE"
+    ],
+    [
+      301,
+      136,
+      0,
+      141,
+      1,
+      "CONDITIONING"
+    ]
+  ],
+  "groups": [],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.45949729863589694,
+      "offset": [
+        -41.49519526116873,
+        -1236.9441863024842
+      ]
+    },
+    "frontendVersion": "1.17.5",
+    "workflowRendererVersion": "LG",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
